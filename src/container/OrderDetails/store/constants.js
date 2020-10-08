@@ -1,0 +1,4 @@
+export default {
+  FETCH_ORDER: "FETCH_ORDER",
+  FETCH_ORDER_SUCCESS: "FETCH_ORDER_SUCCESS",
+};
