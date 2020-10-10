@@ -5,7 +5,6 @@ import "../BurgerBuilder.less";
 import { Button, Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 import OrderSummary from "./OrderSummary";
-import axios from "../../../axios-order";
 import { connect } from "react-redux";
 import ActionTypes from "../../../store/actions";
 import {
