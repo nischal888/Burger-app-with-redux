@@ -1,9 +1,10 @@
 import ActionTypes from "./constants";
 
-export const orderIngredients = (payload) => {
+export const orderIngredients = (payload, tokenId) => {
   return {
     type: ActionTypes.ORDER_BURGER,
     payload,
+    tokenId,
   };
 };
 export const orderIngredientsSuccess = (id, orderData) => {

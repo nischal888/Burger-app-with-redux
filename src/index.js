@@ -10,11 +10,13 @@ import orderIngredientsReducer from "./container/Checkout/store/reducer";
 import createSagaMiddleware from "redux-saga";
 import initIngredientsReducer from "./container/BurgerBuilder/store/reducer";
 import fetchOrderReducer from "./container/OrderDetails/store/reducer";
+import authenticationReducer from "./container/Aunthentication/store/reducer";
 import { rootSaga } from "./saga";
 const rootReducer = combineReducers({
   orderIngredientsReducer,
   initIngredientsReducer,
   fetchOrderReducer,
+  authenticationReducer,
 });
 const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -1,8 +1,9 @@
 import ActionTypes from "./constants";
 
-export const fetchOrder = () => {
+export const fetchOrder = (tokenId) => {
   return {
     type: ActionTypes.FETCH_ORDER,
+    tokenId,
   };
 };
 

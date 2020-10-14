@@ -6,7 +6,6 @@ import { Button, Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 import OrderSummary from "./OrderSummary";
 import { connect } from "react-redux";
-import ActionTypes from "../../../store/actions";
 import {
   initIngredients,
   addIngredients,
@@ -48,7 +47,6 @@ class BurgerBuilderComponent extends React.Component {
 
   updatePurchase = () => {
     const updatedIngredients = { ...this.props.newIngredients };
-    console.log("component", updatedIngredients);
     const sum = Object.keys(updatedIngredients)
       .map((igKeys) => {
         return updatedIngredients[igKeys];
@@ -65,6 +63,9 @@ class BurgerBuilderComponent extends React.Component {
     });
   };
   openOrderSummary = () => {
+    if (!this.props.tokenId) {
+      this.props.history.push("/authentication");
+    }
     this.setState({
       summaryModal: true,
     });
@@ -94,9 +95,9 @@ class BurgerBuilderComponent extends React.Component {
               <Button
                 type="primary"
                 onClick={this.openOrderSummary}
-                disabled={!this.updatePurchase()}
+                disabled={this.props.tokenId && !this.updatePurchase()}
               >
-                Order
+                {this.props.tokenId ? "Order" : "Sign up to Order"}
               </Button>
             </div>
             {controls.map((ctrl) => {
@@ -127,11 +128,12 @@ class BurgerBuilderComponent extends React.Component {
     );
   }
 }
-const mapStateToProps = ({ reducer, initIngredientsReducer }) => {
+const mapStateToProps = ({ authenticationReducer, initIngredientsReducer }) => {
   return {
     //ingrnt: reducer.ingredients,
     price: initIngredientsReducer.totalPrice,
     newIngredients: initIngredientsReducer.ingredients,
+    tokenId: authenticationReducer.tokenId !== null,
   };
 };
 const mapDispatchToProps = {

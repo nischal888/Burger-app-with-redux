@@ -46,7 +46,7 @@ class ContactForm extends React.Component {
     //   });
     //   this.props.history.push("/");
     // });
-    this.props.orderIngredients(payload);
+    this.props.orderIngredients(payload, this.props.tokenId);
   };
   render() {
     const antIcon = <LoadingOutlined style={{ fontSize: 44 }} spin />;
@@ -112,10 +112,11 @@ class ContactForm extends React.Component {
     );
   }
 }
-const mapStateToProps = ({ initIngredientsReducer }) => {
+const mapStateToProps = ({ initIngredientsReducer, authenticationReducer }) => {
   return {
     ingrnt: initIngredientsReducer.ingredients,
     price: initIngredientsReducer.totalPrice,
+    tokenId: authenticationReducer.tokenId,
   };
 };
 const mapDispatchToProps = {

@@ -4,7 +4,7 @@ import { Card } from "antd";
 import { fetchOrder } from "../store/action";
 class OrderDetails extends React.Component {
   componentDidMount() {
-    this.props.fetchOrder();
+    this.props.fetchOrder(this.props.tokenId);
   }
   render() {
     const { fetchOrders } = this.props;
@@ -39,9 +39,10 @@ class OrderDetails extends React.Component {
     );
   }
 }
-const mapStateToProps = ({ fetchOrderReducer }) => {
+const mapStateToProps = ({ fetchOrderReducer, authenticationReducer }) => {
   return {
     fetchOrders: fetchOrderReducer.fetchedOrders,
+    tokenId: authenticationReducer.tokenId,
   };
 };
 const mapDispatchToProps = {

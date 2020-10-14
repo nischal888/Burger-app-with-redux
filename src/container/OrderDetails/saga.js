@@ -3,8 +3,9 @@ import ActionTypes from "./store/constants";
 import * as Apis from "./apis";
 import * as action from "./store/action";
 
-function* fetchOrderSaga() {
-  const response = yield call(Apis.fetchOrderApi);
+function* fetchOrderSaga({ tokenId }) {
+  console.log(tokenId);
+  const response = yield call(Apis.fetchOrderApi, tokenId);
   const data = yield response.json();
   const refinedOrders = [];
   for (let prop in data) {

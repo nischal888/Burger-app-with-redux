@@ -3,6 +3,7 @@ import ActionTypes from "./constants";
 const initialState = {
   ingredients: null,
   totalPrice: 3,
+  builder: false,
 };
 const priceIncrements = {
   salad: 0.5,
@@ -18,6 +19,7 @@ const initIngredientsReducer = (state = initialState, action) => {
         ...state,
         ingredients: action.ingredients,
         totalPrice: 3,
+        builder: false,
       };
     case ActionTypes.ADD_INGREDIENT:
       return {
@@ -27,6 +29,7 @@ const initIngredientsReducer = (state = initialState, action) => {
           [action.ingredientName]: state.ingredients[action.ingredientName] + 1,
         },
         totalPrice: state.totalPrice + priceIncrements[action.ingredientName],
+        builder: true,
       };
     case ActionTypes.REMOVE_INGREDIENT:
       return {
@@ -36,6 +39,7 @@ const initIngredientsReducer = (state = initialState, action) => {
           [action.ingredientName]: state.ingredients[action.ingredientName] - 1,
         },
         totalPrice: state.totalPrice - priceIncrements[action.ingredientName],
+        builder: true,
       };
     default:
       // need this for default case
