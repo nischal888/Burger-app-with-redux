@@ -8,15 +8,24 @@ export const authenticateUser = (payload, isSignUp) => {
   };
 };
 
-export const authenticateUserSuccess = (payload) => {
+export const authenticateUserSuccess = (tokenId, expiration) => {
   return {
     type: ActionTypes.AUTHENTICATE_USER_SUCCESS,
-    payload,
+    tokenId,
+    expiration,
   };
 };
 
 export const logOut = () => {
+  localStorage.removeItem("tokenId");
+  localStorage.removeItem("expirationTime");
   return {
     type: ActionTypes.LOGOUT_SUCCESS,
+  };
+};
+
+export const retainLoginStatus = () => {
+  return {
+    type: ActionTypes.TOKEN_STATUS,
   };
 };

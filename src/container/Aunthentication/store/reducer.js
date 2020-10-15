@@ -1,6 +1,6 @@
 import ActionTypes from "./constants";
 const initialState = {
-  authData: null,
+  //authData: null,
   tokenId: null,
   expiration: "",
 };
@@ -8,13 +8,11 @@ const initialState = {
 const authenticationReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.AUTHENTICATE_USER_SUCCESS:
-      const { idToken, expiresIn } = action.payload;
-      console.log(idToken);
       return {
         ...state,
-        authData: action.payload,
-        tokenId: idToken,
-        expiration: expiresIn,
+        //authData: action.payload,
+        tokenId: action.tokenId,
+        expiration: action.expiration,
       };
     case ActionTypes.LOGOUT_SUCCESS:
       return {

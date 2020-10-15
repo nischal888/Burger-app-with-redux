@@ -4,7 +4,7 @@ import orderIngredientsSaga from "../container/Checkout/saga";
 import fetchOrderSaga from "../container/OrderDetails/saga";
 import authenticateUserSaga from "../container/Aunthentication/saga";
 
-export function* rootSaga() {
+function* rootSaga() {
   yield all([
     ...initIngredientsSaga,
     ...orderIngredientsSaga,
@@ -12,3 +12,5 @@ export function* rootSaga() {
     ...authenticateUserSaga,
   ]);
 }
+
+export default rootSaga;
