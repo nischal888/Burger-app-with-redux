@@ -2,6 +2,7 @@
   "name": "burger-build",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nischal888.github.io/Burger-app-with-redux/",
   "dependencies": {
     "@craco/craco": "^5.6.4",
     "@testing-library/jest-dom": "^4.2.4",
@@ -25,7 +26,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
