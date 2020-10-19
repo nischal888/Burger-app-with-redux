@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e0198c6.chunk.css",
-    "main.js": "/static/js/main.b394eec9.chunk.js",
-    "main.js.map": "/static/js/main.b394eec9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8d7ec1ce.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8d7ec1ce.js.map",
-    "static/js/2.739642d3.chunk.js": "/static/js/2.739642d3.chunk.js",
-    "static/js/2.739642d3.chunk.js.map": "/static/js/2.739642d3.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.f4ead8cb6fe3c3b0aacbac31a84e2efb.js": "/precache-manifest.f4ead8cb6fe3c3b0aacbac31a84e2efb.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5e0198c6.chunk.css.map": "/static/css/main.5e0198c6.chunk.css.map",
-    "static/js/2.739642d3.chunk.js.LICENSE.txt": "/static/js/2.739642d3.chunk.js.LICENSE.txt",
-    "static/media/burger.svg": "/static/media/burger.fbe040ce.svg"
+    "main.css": "/Burger-app-with-redux/static/css/main.498896b2.chunk.css",
+    "main.js": "/Burger-app-with-redux/static/js/main.78187008.chunk.js",
+    "main.js.map": "/Burger-app-with-redux/static/js/main.78187008.chunk.js.map",
+    "runtime-main.js": "/Burger-app-with-redux/static/js/runtime-main.0023f4b4.js",
+    "runtime-main.js.map": "/Burger-app-with-redux/static/js/runtime-main.0023f4b4.js.map",
+    "static/js/2.eeba2227.chunk.js": "/Burger-app-with-redux/static/js/2.eeba2227.chunk.js",
+    "static/js/2.eeba2227.chunk.js.map": "/Burger-app-with-redux/static/js/2.eeba2227.chunk.js.map",
+    "index.html": "/Burger-app-with-redux/index.html",
+    "precache-manifest.2a58c8cf665c870c46db074573922db5.js": "/Burger-app-with-redux/precache-manifest.2a58c8cf665c870c46db074573922db5.js",
+    "service-worker.js": "/Burger-app-with-redux/service-worker.js",
+    "static/css/main.498896b2.chunk.css.map": "/Burger-app-with-redux/static/css/main.498896b2.chunk.css.map",
+    "static/js/2.eeba2227.chunk.js.LICENSE.txt": "/Burger-app-with-redux/static/js/2.eeba2227.chunk.js.LICENSE.txt",
+    "static/media/burger.svg": "/Burger-app-with-redux/static/media/burger.fbe040ce.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d7ec1ce.js",
-    "static/js/2.739642d3.chunk.js",
-    "static/css/main.5e0198c6.chunk.css",
-    "static/js/main.b394eec9.chunk.js"
+    "static/js/runtime-main.0023f4b4.js",
+    "static/js/2.eeba2227.chunk.js",
+    "static/css/main.498896b2.chunk.css",
+    "static/js/main.78187008.chunk.js"
   ]
 }
