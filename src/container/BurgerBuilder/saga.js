@@ -5,8 +5,9 @@ import ActionTypes from "./store/constants";
 
 function* initIngredientsSaga() {
   const response = yield call(Apis.initIngredientsApi);
+
   const data = yield response.json();
   yield put(action.initIngredientsSucceded(data));
 }
 
-export default [takeLatest(ActionTypes.INIT_INGRDIENTS, initIngredientsSaga)];
+export default [takeEvery(ActionTypes.INIT_INGRDIENTS, initIngredientsSaga)];
